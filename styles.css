@@ -615,12 +615,21 @@ section {
     height: 55px;
     border-radius: 50%;
     border: 1px solid var(--primary-color);
-    background: rgba(10, 10, 15, 0.9);
+    background: rgba(10, 10, 15, 0.95);
     color: var(--primary-color);
     font-size: 1.4rem;
     cursor: pointer;
-    z-index: 999;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
     transition: var(--transition-speed);
+}
+
+.back-to-top-btn.show-back-to-top {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
 }
 
 .back-to-top-btn:hover {

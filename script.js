@@ -172,25 +172,25 @@ function setupContactForm() {
 
 // Back to top button
 function setupBackToTopButton() {
-    const backToTopBtn = $("#backToTopBtn");
+    const backToTopButton = document.querySelector("#backToTopBtn");
 
-    backToTopBtn.hide();
+    if (!backToTopButton) {
+        return;
+    }
 
-    $(window).on("scroll", function () {
-        if ($(window).scrollTop() > 500) {
-            backToTopBtn.fadeIn(200);
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > 500) {
+            backToTopButton.classList.add("show-back-to-top");
         } else {
-            backToTopBtn.fadeOut(200);
+            backToTopButton.classList.remove("show-back-to-top");
         }
     });
 
-    backToTopBtn.on("click", function () {
-        $("html, body").animate(
-            {
-                scrollTop: 0
-            },
-            700
-        );
+    backToTopButton.addEventListener("click", function () {
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
     });
 }
 
