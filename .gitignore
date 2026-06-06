@@ -1,0 +1,19 @@
+```gitignore
+# System files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Logs
+*.log
+
+# Environment files
+.env
+.env.local
+
+# Temporary files
+*.tmp
+*.bak
